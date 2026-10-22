@@ -27,7 +27,6 @@ namespace TestProject2
             // Disable extensions
             options.AddArguments("disable-extensions");
             // Remote debugging port
-            options.AddArguments("remote-debugging-port=9222");
             driver = new ChromeDriver(options);
 
             // Add implicit wait

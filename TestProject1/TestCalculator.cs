@@ -34,7 +34,6 @@ namespace TestProject1
             // Disable extensions
             options.AddArguments("disable-extensions");
             // Remote debugging port
-            options.AddArguments("remote-debugging-port=9222");
             driver = new ChromeDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Url = "http://calculatorhtml.onrender.com/";
