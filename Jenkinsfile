@@ -1,17 +1,17 @@
 pipeline{
     agent any
     stages {
-    stage('Restore the dependencies') {
-        steps {
-            sh "dotnet restore"
+        stage('Restore the dependencies') {
+            steps {
+                sh "dotnet restore"
+            }
         }
-    }
-    stage('build') {
-        steps {
-            sh "dotnet build --no-restore"
+        stage('build') {
+            steps {
+                sh "dotnet build --no-restore"
+            }
         }
-    }
-    stage("Run different project tests"){
+        stage("Run different project tests"){
         parallel{
         stage("Project1 tests"){
             steps{
@@ -30,6 +30,6 @@ pipeline{
         }
         }
 
-
+        }
     }
 }
